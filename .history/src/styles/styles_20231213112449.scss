@@ -1,0 +1,26 @@
+// styles/main.scss
+
+$primary-color: #3498db;
+
+body {
+  background-color: $primary-color;
+}
+
+button {
+    background-color: red;
+}
+
+.accordion {
+  &-list {
+    &-item {
+      &-title {
+        &-trigger {
+
+        }
+      }
+      &-content {
+        
+      }
+    }
+  }
+}

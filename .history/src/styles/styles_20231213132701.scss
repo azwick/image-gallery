@@ -1,0 +1,107 @@
+// styles/main.scss
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+$primary-color: #eeeeee;
+
+$spacing: 1rem;
+
+body {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  overflow-x: hidden;
+  background-color: $primary-color;
+}
+
+button {
+  background: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.page {
+  display: grid;
+  width: 100%;
+
+  @media (min-width: 640px) {
+    place-content: center;
+  }
+
+  // @media (min-width: 960px) {
+  //   min-height: 100vh;
+  // }
+}
+
+.header {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto;
+  padding-top: $spacing;
+  padding-bottom: $spacing;
+
+  &-title {
+    font-size: 2rem;  
+  }
+
+  &-button {
+    svg {
+      width: 30px;
+      height: 30px;
+    }
+  }
+}
+
+.accordionList {
+  display: grid;
+  grid-row-gap: ($spacing/2);
+
+  &-item {
+    background-color: white;
+    border-radius: 5px;
+
+    &-title {
+      display: grid;
+      grid-template-columns: auto auto;
+      justify-content: space-between;
+      width: 100%;
+      padding: $spacing;
+      cursor: pointer;
+
+      &-text {
+
+      }
+      &-trigger {
+        color: blue;
+
+        &.open {
+          color: red;
+        }
+      }
+    }
+    &-content {
+      padding: $spacing;
+      border-top: 1px solid $primary-color;
+    }
+  }
+}
+
+.wishList {
+  background-color: white;
+  border-radius: 5px;
+  padding: $spacing;
+}
+
+.galleryList {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-gap: ($spacing/2);
+
+  &-item {
+    width: 50px;
+    height: 50px;
+    background-color: pink;
+  }
+}

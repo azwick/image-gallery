@@ -1,0 +1,38 @@
+// styles/main.scss
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+$primary-color: #3498db;
+
+body {
+  background-color: $primary-color;
+}
+
+button {
+  background: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.accordionList {
+  &-item {
+    &-title {
+      &-trigger {
+
+      }
+    }
+    &-content {
+      
+    }
+  }
+}
+
+.galleryList {
+  &-item {
+    
+  }
+}

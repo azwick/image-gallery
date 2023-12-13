@@ -1,0 +1,71 @@
+// styles/main.scss
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+$primary-color: #3498db;
+
+body {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+button {
+  background: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.page {
+  display: grid;
+  width: 100%;
+
+  @media (min-width: 640px) {
+    place-content: center;
+  }
+
+  @media (min-width: 960px) {
+    min-height: 100vh;
+  }
+}
+
+.header {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto;
+}
+
+.accordionList {
+  &-item {
+    border: 1px solid $primary-color;
+
+    &-title {
+      display: grid;
+      grid-template-columns: auto auto;
+      justify-content: space-between;
+      width: 100%;
+      padding: 1rem;
+
+      &-text {
+        display: inline-block;
+
+      }
+      &-trigger {
+        display: inline-block;
+
+      }
+    }
+    &-content {
+      
+    }
+  }
+}
+
+.galleryList {
+  &-item {
+
+  }
+}
