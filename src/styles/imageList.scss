@@ -1,0 +1,35 @@
+
+.imageList {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 1rem;
+
+    @media (min-width: 640px) {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+  
+    &-item {
+      position: relative;
+      line-height: 0;
+      
+        &-actionIcon {
+            position: absolute;
+            z-index: 10;
+            top: 5px;
+            right: 5px;
+            cursor: pointer;
+        
+            svg {
+                fill: var(--white);
+                height: 20px;
+                width: 20px;
+
+                @media (min-width: 960px) {
+                    height: 25px;
+                    width: 25px;
+                }
+            }
+        }
+  }
+}
+  

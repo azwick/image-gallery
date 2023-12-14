@@ -17,13 +17,13 @@
   --font: 'Overpass', sans-serif;
   --spacing: 1rem;
   --midContentWidth: 600px;
-  --largeContentWidth: 845px;
 }
 
 body {
   font-family: var(--font);
   font-size: 14px;
   color: var(--black);
+  overflow-x: hidden;
   background-color: var(--lightGrey);
   font-weight: 400;
 }
@@ -46,7 +46,7 @@ button {
 .page {
   display: grid;
   grid-row-gap: 2rem;
-  width: 100%;
+  width: 100vw;
   margin: 3rem 0;
 
   @media (min-width: 640px) {
@@ -55,32 +55,29 @@ button {
 }
 
 .pageHead {
-  margin: 0 var(--spacing);
   display: grid;
   grid-template-columns: auto auto;
   justify-content: space-between;
   align-items: center;
+  margin: 0 var(--spacing);
 
   @media (min-width: 640px) {
     width: var(--midContentWidth);
   }
+
   @media (min-width: 960px) {
-    width: var(--largeContentWidth);
+    width: 845px;
   }
 
   &-title {
     font-weight: 300;
-    font-size: 2rem;
+    font-size: 2rem;  
   }
 
   &-nav-list {
-    text-align: right;
     display: grid;
-
-    @media (min-width: 640px) {
-      grid-template-columns: auto auto;
-      grid-gap: 1rem;
-    }
+    grid-template-columns: auto auto;
+    grid-gap: 1rem;
 
     &-item {
       padding: 4px;
@@ -88,26 +85,9 @@ button {
       transition: 0.5s ease color;
       cursor: pointer;
 
-      .counter {
-        display: inline-block;
-        width: 20px;
-        height: 20px;
-        margin-left: 5px;
-        border-radius: 50%;
-        background-color: var(--black);
-        transition: 0.5s ease background-color;
-        color: var(--white);
-        line-height: 1.4;
-        font-size: 14px;
-      }
-
       &:hover,
       &.active {
         color: var(--primaryColor);
-
-        .counter {
-          background-color: var(--primaryColor);
-        }
       }
     }
   }
@@ -120,16 +100,12 @@ button {
   @media (min-width: 640px) {
     width: var(--midContentWidth);
   }
-  @media (min-width: 960px) {
-    width: var(--largeContentWidth);
-  }
 
   &-title {
     font-weight: 300;
     font-size: 1.4rem;
   }
 }
-
 
 .card {
   background-color: var(--white);
@@ -139,9 +115,6 @@ button {
 
   @media (min-width: 640px) {
     width: var(--midContentWidth);
-  }
-  @media (min-width: 960px) {
-    width: var(--largeContentWidth);
   }
 }
 

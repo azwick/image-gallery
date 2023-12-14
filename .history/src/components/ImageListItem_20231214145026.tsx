@@ -1,6 +1,7 @@
 
 import { useState } from "react";
 import { HeartFilledIcon, HeartStrokeIcon } from "./SVGs";
+import Lightbox from "./LightBox";
 
 export interface ImageListItemInterface {
   albumId: number;
@@ -21,18 +22,25 @@ const ImageListItem = ({ albumId, id, title, url, thumbnailUrl, defaultSelection
     setSelectedPhoto(!selectedPhoto)
   }
 
+  const handleLightbox = () => {
+    setShowLightbox(true);
+  }
+
   return (
     <>
       <div className="imageList-item">
-        <img src={thumbnailUrl} alt={title} />
-        <button onClick={() => handleClick(albumId, id, title, url, thumbnailUrl)} className="imageList-item-actionIcon">
+        <img onClick={() => handleLightbox()} src={thumbnailUrl} alt={title} />
+        <div onClick={() => handleClick(albumId, id, title, url, thumbnailUrl)} className="addIcon">
           {selectedPhoto ?
             <HeartFilledIcon/>
             :
             <HeartStrokeIcon/>
             }
-        </button>
+        </div>
       </div>
+      {
+        showLightbox && <Lightbox url={url} title={title}/>
+      }
     </>
   );
 };

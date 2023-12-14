@@ -24,6 +24,7 @@ body {
   font-family: var(--font);
   font-size: 14px;
   color: var(--black);
+  // overflow-x: hidden;
   background-color: var(--lightGrey);
   font-weight: 400;
 }
@@ -88,26 +89,9 @@ button {
       transition: 0.5s ease color;
       cursor: pointer;
 
-      .counter {
-        display: inline-block;
-        width: 20px;
-        height: 20px;
-        margin-left: 5px;
-        border-radius: 50%;
-        background-color: var(--black);
-        transition: 0.5s ease background-color;
-        color: var(--white);
-        line-height: 1.4;
-        font-size: 14px;
-      }
-
       &:hover,
       &.active {
         color: var(--primaryColor);
-
-        .counter {
-          background-color: var(--primaryColor);
-        }
       }
     }
   }
@@ -130,6 +114,15 @@ button {
   }
 }
 
+.counter {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+  border-radius: 50%;
+  background-color: var(--primaryColor);
+  color: var(--white);
+}
 
 .card {
   background-color: var(--white);

@@ -24,6 +24,7 @@ body {
   font-family: var(--font);
   font-size: 14px;
   color: var(--black);
+  // overflow-x: hidden;
   background-color: var(--lightGrey);
   font-weight: 400;
 }
@@ -92,7 +93,7 @@ button {
         display: inline-block;
         width: 20px;
         height: 20px;
-        margin-left: 5px;
+        margin-right: 5px;
         border-radius: 50%;
         background-color: var(--black);
         transition: 0.5s ease background-color;

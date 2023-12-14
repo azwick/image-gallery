@@ -25,13 +25,13 @@ const ImageListItem = ({ albumId, id, title, url, thumbnailUrl, defaultSelection
     <>
       <div className="imageList-item">
         <img src={thumbnailUrl} alt={title} />
-        <button onClick={() => handleClick(albumId, id, title, url, thumbnailUrl)} className="imageList-item-actionIcon">
+        <div onClick={() => handleClick(albumId, id, title, url, thumbnailUrl)} className="addIcon">
           {selectedPhoto ?
             <HeartFilledIcon/>
             :
             <HeartStrokeIcon/>
             }
-        </button>
+        </div>
       </div>
     </>
   );
