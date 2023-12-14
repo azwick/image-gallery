@@ -1,0 +1,60 @@
+.accordionList {
+    display: grid;
+    grid-row-gap: 1rem;
+    margin: 0 var(--spacing);
+  
+    @media (min-width: 640px) {
+      width: var(--contentSize);
+    }
+  
+    &-item {
+      background-color: var(--white);
+      border-radius: 5px;
+  
+      &-title {
+        display: grid;
+        grid-template-columns: auto auto;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        text-align: left;
+        padding: var(--spacing);
+        color: var(--black);
+        transition: 0.5s ease color;
+        cursor: pointer;
+  
+        &-trigger {
+          line-height: 0;
+  
+          svg {
+            width: 20px;
+            height: 20px;
+            fill: var(--black);
+            transition: 0.5s ease fill;
+          }
+        }
+  
+        &:hover,
+        &.active {
+          color: var(--primaryColor);
+  
+          .accordionList-item-title-trigger {
+            svg {
+              fill: var(--primaryColor);
+            }
+          }
+        }
+      }
+  
+      &-content {
+        padding: var(--spacing);
+        border-top: 1px solid var(--lightGrey);
+        display: none;
+  
+        &.active {
+          display: block;
+        }
+      }
+    }
+  }
+  
