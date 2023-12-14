@@ -1,4 +1,5 @@
 import ImageListItem from "./components/ImageListItem";
+import './styles/styles.scss';
 
 const WishListView = ({ handleWishList, favoritesList }:any) => {
 
